@@ -19,9 +19,14 @@
           <h1>Google Keep from WebCademy</h1>
         </div>
       </div>
-      <form action="" class="form">
+      <form action="" class="form" id="addNoteForm">
         <div class="input-group">
-          <input type="text" placeholder="Текст заметки" class="form-control" />
+          <input
+            type="text"
+            placeholder="Текст заметки"
+            class="form-control"
+            id="notetext"
+          />
           <button class="btn btn-primary">Добавить заметку</button>
         </div>
       </form>
@@ -29,53 +34,19 @@
 
     <main class="main">
       <div class="container">
-        <div class="main__cards-wrapper">
-          <section class="card" style="width: 18rem">
+        <div class="main__cards-wrapper" id="cardsWrapper">
+          <!-- <section class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Card subtitle
-              </h6>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
             </div>
-          </section>
-
-          <section class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Card subtitle
-              </h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </section>
-
-          <section class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Card subtitle
-              </h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </section>
+          </section> -->
         </div>
       </div>
     </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
