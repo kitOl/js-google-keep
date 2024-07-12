@@ -6,34 +6,45 @@ const noteDelete = document.querySelector("#btnDelete");
 
 const cardsWrapper = document.querySelector("#cardsWrapper");
 
-const notes = [
-  {
-    id: 1,
-    title: "Basic JS",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    id: 2,
-    title: "DOM",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    id: 3,
-    title: "Events in JavaScript",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-];
+// const notes = [
+//   {
+//     id: 1,
+//     title: "Basic JS",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+//   },
+//   {
+//     id: 2,
+//     title: "DOM",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+//   },
+//   {
+//     id: 3,
+//     title: "Events in JavaScript",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+//   },
+// ];
+
+let notes = [];
+if (localStorage.getItem("notes")) {
+  notes = JSON.parse(localStorage.getItem("notes"));
+}
+
+console.log("notes", notes);
 
 showAllNotes();
 
 addNoteForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  let id = notes.length ? notes[notes.length - 1]["id"] + 1 : 1;
+
   notes.push({
-    id: notes[notes.length - 1]["id"] + 1,
+    id: id,
     title: noteTitleInput.value,
     text: noteTextInput.innerHTML,
   });
+
+  localStorage.setItem("notes", JSON.stringify(notes));
 
   console.log(notes);
 
@@ -56,6 +67,8 @@ document.addEventListener("click", (e) => {
     const index = notes.findIndex((item) => {
       return item.id == id;
     });
+
+    localStorage.setItem("notes", JSON.stringify(notes));
 
     console.log("index", index);
 
