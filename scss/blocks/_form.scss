@@ -3,3 +3,38 @@
   width: 100%;
   max-width: 600px;
 }
+
+.form__starter,
+.form__content {
+  background-color: #fff;
+}
+
+.form__title,
+.form__text,
+.form__text-fake {
+  margin-bottom: 1rem;
+}
+
+.form__text-wrapper {
+  position: relative;
+}
+
+.form__text-fake {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+
+  pointer-events: none;
+  user-select: none;
+
+  color: #777;
+}
+
+.form__title {
+  font-weight: 700;
+}
+
+.form__content .btn {
+  width: 100%;
+}

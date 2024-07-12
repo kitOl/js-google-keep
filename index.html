@@ -20,7 +20,30 @@
         </div>
       </div>
       <form action="" class="form" id="addNoteForm">
-        <div class="input-group">
+        <div class="form__starter shadow p-3 mb-5 rounded">Note...</div>
+
+        <div class="form__content shadow p-3 mb-5 rounded" hidden="true">
+          <input
+            class="form__title"
+            type="text"
+            placeholder="Название заметки"
+            id="noteTitleInput"
+          />
+          <div class="form__text-wrapper">
+            <div class="form__text-fake">Текст заметки</div>
+            <div
+              class="form__text"
+              contenteditable="true"
+              id="noteTextInput"
+            ></div>
+          </div>
+
+          <button class="btn btn-primary" disabled id="btnSubmit">
+            Добавить заметку
+          </button>
+        </div>
+
+        <!-- <div class="input-group">
           <input
             type="text"
             placeholder="Текст заметки"
@@ -28,7 +51,7 @@
             id="notetext"
           />
           <button class="btn btn-primary">Добавить заметку</button>
-        </div>
+        </div> -->
       </form>
     </header>
 
@@ -47,6 +70,7 @@
       </div>
     </main>
 
+    <script src="./js/formUI.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
