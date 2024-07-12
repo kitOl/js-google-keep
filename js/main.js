@@ -49,7 +49,7 @@ addNoteForm.addEventListener("submit", (e) => {
   console.log(notes);
 
   addNoteForm.reset();
-  noteTextInput.textContent = "";
+  noteTextInput.innerHTML = "";
   btnSubmit.disabled = true;
   formStarter.hidden = false;
   formTextFake.textContent = "Текст заметки...";
