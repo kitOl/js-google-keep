@@ -68,12 +68,11 @@ document.addEventListener("click", (e) => {
       return item.id == id;
     });
 
-    localStorage.setItem("notes", JSON.stringify(notes));
-
     console.log("index", index);
 
     notes.splice(index, 1);
     e.target.closest(".card").remove();
+    localStorage.setItem("notes", JSON.stringify(notes));
   }
 });
 
